@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Intelligence Portfolio - Marwan Ashraf</title>
+ <style>
+        @page {
+            size: A4;
+            margin: 12mm 15mm;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 10px 20px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #e60000;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+        
+        .header .tagline {
+            font-size: 14px;
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .intro {
+            background: #f8f8f8;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e60000;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+            page-break-inside: auto;
+            page-break-after: auto;
+        }
+        
+        .section-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #e60000;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f0f0f0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            page-break-after: avoid;
+        }
+        
+        .project {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #fafafa;
+            border-radius: 6px;
+            border-left: 4px solid #e60000;
+            page-break-inside: auto;
+            page-break-before: auto;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+            page-break-after: avoid;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+        }
+        
+        .project-badge {
+            background: #e60000;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .project-description {
+            font-size: 12px;
+            color: #444;
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+        
+        .impact-section {
+            background: white;
+            padding: 8px 10px;
+            border-radius: 5px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .impact-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #e60000;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+        
+        .highlights {
+            margin-top: 6px;
+        }
+        
+        .highlight-item {
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+        }
+        
+        .highlight-item:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #e60000;
+            font-weight: bold;
+        }
+        
+        .tech-stack {
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .tech-tag {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 10px;
+            color: #555;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e60000;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        .publication {
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            background: white;
+            border-left: 3px solid #e60000;
+            border-radius: 4px;
+        }
+        
+        .pub-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .pub-venue {
+            font-size: 11px;
+            color: #e60000;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        
+        .pub-award {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+        
+        .pub-description {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .link-icon {
+            color: #e60000;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        
+        .footer {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 10px;
+            color: #999;
+            padding-top: 10px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media print {
+            body {
+                padding: 8px 15px;
+            }
+            
+            .section {
+                page-break-inside: auto;
+            }
+            
+            .project {
+                page-break-inside: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Data Intelligence Portfolio</h1>
+        <div class="tagline">Marwan Ashraf | Data Intelligence & Analytics Professional</div>
+    </div>
+    
+    <div class="intro">
+        Data intelligence professional with proven expertise in transforming complex datasets into actionable business insights. Skilled in end-to-end data analysis, predictive modeling, and strategic decision support. Strong track record of delivering measurable business impact through data-driven solutions, interactive dashboards, and cross-functional collaboration. Published researcher with experience bridging technical analysis and stakeholder communication.
+    </div>
+    
+    <!-- Professional Experience Projects -->
+    <div class="section">
+        <div class="section-title">Professional Data Intelligence Experience</div>
+        
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Product Recommendation Intelligence System</div>
+                <div class="project-badge">SELECT - Cairo</div>
+            </div>
+            <div class="project-meta">Junior Data Scientist | Business Intelligence & Analytics</div>
+            <div class="project-description">
+                Developed intelligent recommendation engine that transformed customer interaction patterns into personalized product strategies. Led comprehensive data analysis to identify customer segments and purchasing behaviors, directly supporting business growth objectives.
+            </div>
+            
+            <div class="impact-section">
+                <div class="impact-title">🎯 Business Impact & Insights</div>
+                <div class="highlights">
+                    <div class="highlight-item">Analyzed customer purchase patterns to identify high-value product affinities and cross-selling opportunities</div>
+    
+                    <div class="highlight-item">Collaborated with product teams to translate analytical findings into business recommendations</div>
+                </div>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight-item"><strong>Data Analysis:</strong> Exploratory analysis of transaction data, customer segmentation, cohort analysis</div>
+                <div class="highlight-item"><strong>Modeling:</strong> Collaborative filtering</div>
+                <div class="highlight-item"><strong>Visualization:</strong> Built interactive dashboards for business performance monitoring</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">A/B Testing</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Visualization</span>
+                <span class="tech-tag">Scikit-learn</span>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Telecom Network Analytics & Forecasting</div>
+                <div class="project-badge">SELECT - Cairo</div>
+            </div>
+            <div class="project-meta">Junior Data Scientist | Network Performance Intelligence</div>
+            <div class="project-description">
+                Contributed to strategic network capacity planning through time-series analysis and predictive modeling. Transformed complex network telemetry data into actionable insights for infrastructure optimization and proactive decision-making.
+            </div>
+            
+            <div class="impact-section">
+                <div class="impact-title">🎯 Business Impact & Insights</div>
+                <div class="highlights">
+                    <div class="highlight-item">Analyzed historical network traffic patterns to identify trends and anomalies supporting capacity planning</div>
+                    <div class="highlight-item">Provided data-driven recommendations for network resource allocation optimization</div>
+                    <div class="highlight-item">Communicated technical findings to non-technical stakeholders through clear visualizations</div>
+                    <div class="highlight-item">Supported business performance enhancement through predictive network intelligence</div>
+                </div>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight-item"><strong>Data Analysis:</strong> Time-series decomposition, trend analysis, pattern recognition in network data</div>
+                <div class="highlight-item"><strong>Forecasting:</strong> Developed LSTM models for network traffic prediction</div>
+                <div class="highlight-item"><strong>Insights:</strong> Generated strategic reports on network performance and capacity requirements</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Time-Series Analysis</span>
+                <span class="tech-tag">LSTM</span>
+                <span class="tech-tag">Data Visualization</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Pandas</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Featured Project -->
+    <div class="section">
+        <div class="section-title">Featured Analytics Project</div>
+        
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">
+                    <a href="https://github.com/MarwanAshrafMakhlouf/IBM_Data_Science_Capstone" target="_blank" style="text-decoration: none; color: inherit;">
+                        SpaceX Launch Success Intelligence Platform
+                        <span class="link-icon">🔗</span>
+                    </a>
+                </div>
+                <div class="project-badge">IBM Data Science Certificate</div>
+            </div>
+            <div class="project-meta">End-to-End Data Intelligence | Analytics | Interactive Dashboards</div>
+            <div class="project-description">
+                Comprehensive data intelligence project analyzing SpaceX Falcon 9 launch data to predict landing success and generate strategic cost optimization insights. Demonstrated full data analysis lifecycle from collection through interactive dashboard deployment, delivering actionable business intelligence.
+            </div>
+            
+            <div class="impact-section">
+                <div class="impact-title">🎯 Analytical Approach & Business Value</div>
+                <div class="highlights">
+                    <div class="highlight-item">Collected and integrated data from multiple sources (APIs, web scraping) to build comprehensive analytical dataset</div>
+                    <div class="highlight-item">Conducted extensive exploratory data analysis revealing key success factors: launch site proximity, vehicle configuration impact, and flight history patterns</div>
+                    <div class="highlight-item">Built interactive Plotly Dash dashboard enabling stakeholders to explore launch trends and success patterns dynamically</div>
+                    <div class="highlight-item">Developed geospatial analysis using Folium to visualize launch site locations and their correlation with success rates</div>
+                    <div class="highlight-item">Translated complex analytical findings into clear business recommendations for cost optimization strategies</div>
+                    <div class="highlight-item">Compared multiple predictive approaches to identify optimal solution balancing accuracy and interpretability</div>
+                </div>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight-item"><strong>Data Intelligence:</strong> API integration, web scraping, data wrangling, feature engineering</div>
+                <div class="highlight-item"><strong>Analysis:</strong> EDA, correlation analysis, statistical testing, pattern recognition</div>
+                <div class="highlight-item"><strong>Visualization:</strong> Interactive dashboards (Plotly Dash), geospatial mapping (Folium), charts</div>
+                <div class="highlight-item"><strong>Predictive Modeling:</strong> Evaluated SVM, Decision Trees, Logistic Regression, Random Forest</div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-value">85%</span>
+                    <span class="metric-label">Prediction Accuracy</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">4</span>
+                    <span class="metric-label">ML Models Compared</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">2</span>
+                    <span class="metric-label">Interactive Dashboards</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">100+</span>
+                    <span class="metric-label">Launch Records Analyzed</span>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Plotly Dash</span>
+                <span class="tech-tag">Folium</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">APIs</span>
+                <span class="tech-tag">Web Scraping</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Graduation Project -->
+    <div class="section">
+        <div class="section-title">Healthcare Analytics Innovation</div>
+        
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7216379281583534080/" target="_blank" style="text-decoration: none; color: inherit;">
+                        SkinSkan: End-to-End Healthcare Diagnostic Intelligence
+                        <span class="link-icon">🔗</span>
+                    </a>
+                </div>
+                <div class="project-badge">Graduation Project - A+ Grade</div>
+            </div>
+            <div class="project-meta">Data-Driven Healthcare | Full-Stack Analytics Platform | 3 Research Publications</div>
+            <div class="project-description">
+                Designed and deployed comprehensive healthcare intelligence platform addressing skin disease diagnosis accessibility gap. Led complete data science lifecycle from problem identification through production deployment, demonstrating ability to transform analytical insights into tangible user value.
+            </div>
+            
+            <div class="impact-section">
+                <div class="impact-title">🎯 Strategic Impact & Analytical Innovation</div>
+                <div class="highlights">
+                    <div class="highlight-item">Identified healthcare accessibility gap and designed data-driven solution democratizing skin disease diagnosis</div>
+                    <div class="highlight-item">Analyzed and addressed severe class imbalance in medical imaging dataset through statistical techniques</div>
+                    <div class="highlight-item">Developed comprehensive user analytics dashboard tracking diagnostic patterns and health trends</div>
+                    <div class="highlight-item">Generated automated diagnostic reports translating model predictions into actionable medical insights</div>
+                    <div class="highlight-item">Conducted systematic hyperparameter optimization through grid search to maximize diagnostic accuracy</div>
+                    <div class="highlight-item">Communicated complex technical findings through 4 peer-reviewed publications (Springer, IEEE)</div>
+                </div>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight-item"><strong>Data Strategy:</strong> Medical imaging data collection, preprocessing pipeline, quality assurance</div>
+                <div class="highlight-item"><strong>Analysis:</strong> Class imbalance analysis, data augmentation strategy, statistical validation</div>
+                <div class="highlight-item"><strong>Intelligence Layer:</strong> Risk assessment algorithms, treatment recommendation engine, user insights dashboard</div>
+                <div class="highlight-item"><strong>Deployment:</strong> Mobile platform (Flutter), cloud infrastructure (PythonAnywhere), model optimization (TFLite)</div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-value">96%</span>
+                    <span class="metric-label">Diagnostic Accuracy</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">95%</span>
+                    <span class="metric-label">F1-Score</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">3</span>
+                    <span class="metric-label">Research Publications</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">5</span>
+                    <span class="metric-label">Disease Categories</span>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Statistical Modeling</span>
+                <span class="tech-tag">Dashboard Development</span>
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Cloud Deployment</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Research Publications -->
+    <div class="section">
+        <div class="section-title">Research & Publications</div>
+        
+        <div class="publication">
+            <div class="pub-title">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-77299-3_33#Abs1" target="_blank" style="text-decoration: none; color: inherit;">
+                    Automatic Skin Cancer Diagnosis in Dermoscopic Imaging Using Brute Force and Xception
+                    <span class="link-icon">🔗</span>
+                </a>
+                <span class="pub-award">🏆 AISI 2024 Best Paper</span>
+            </div>
+            <div class="pub-venue">Springer | December 2024</div>
+            <div class="pub-description">
+                Advanced analytical approach for medical image classification achieving 95.2% accuracy through systematic hyperparameter optimization and data augmentation strategies. Demonstrated ability to handle imbalanced healthcare datasets and communicate technical methodologies to academic audiences.
+            </div>
+        </div>
+        
+        <div class="publication">
+            <div class="pub-title">
+                <a href="https://ieeexplore.ieee.org/document/10652699" target="_blank" style="text-decoration: none; color: inherit;">
+                    A Mobile-Based Deep Learning System for Skin Disease Diagnosis
+                    <span class="link-icon">🔗</span>
+                </a>
+            </div>
+            <div class="pub-venue">IEEE | September 2024</div>
+            <div class="pub-description">
+                Presented novel mobile analytics platform addressing healthcare accessibility through automated diagnosis. Highlighted data preprocessing strategies, statistical validation approaches, and practical deployment considerations for real-world implementation.
+            </div>
+        </div>
+        
+        <div class="publication">
+            <div class="pub-title">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-77299-3_33#Abs1" target="_blank" style="text-decoration: none; color: inherit;">
+                    Deep Learning-Based Multi-class Skin Disease Diagnosis Toward Sustainable Healthcare
+                    <span class="link-icon">🔗</span>
+                </a>
+            </div>
+            <div class="pub-venue">Springer | March 2025</div>
+            <div class="pub-description">
+                Explored multi-class classification challenges in medical diagnostics, demonstrating advanced data analysis techniques for feature extraction and model evaluation. Communicated strategic implications of AI-driven healthcare solutions.
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Data Intelligence Portfolio | Combining analytical rigor, business insight, and technical excellence
+    </div>
+</body>
+</html>
